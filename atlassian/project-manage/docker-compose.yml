@@ -3,17 +3,9 @@ version: '2'
 services:
       jira:
           container_name: jira
-          build: ./project-manage
+          build: .
           ports:
               - "9001:8080"
-          links:
-              - mysql
-
-      confluence:
-          container_name: confluence
-          build: ./wiki
-          ports:
-              - "9002:8090"
           links:
               - mysql
 
